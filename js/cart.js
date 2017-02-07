@@ -24,7 +24,7 @@ new Vue({
     methods:{
         getData:function(){
             var _this = this;
-            this.$http.get("http://192.168.123.100:8000/data/data.json").then(function(res){
+            this.$http.get("data/data.json").then(function(res){
                 _this.productList=res.body.product.list;
                 //_this.total=res.body.product.total;
             });
