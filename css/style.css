@@ -1,0 +1,231 @@
+*{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+
+.shopping-cart{overflow: hidden;}
+.s_title{height: auto;overflow: hidden;}
+.s_title ul li{box-sizing:border-box;float: left;width: 20%;height: 30px;text-align: center;line-height: 30px;background-color: #abcdef;border-bottom: 1px solid #aaa;border-right:1px solid #aaa;}
+.s_title ul li:nth-child(1){
+    width: 40%;
+}
+.s_title ul li:nth-child(2n){
+    width: 10%;
+}
+.s_content>ul>li{border-bottom: 1px solid #aaa;overflow: hidden;}
+.s_content>ul>li>div{float: left;width: 20%;text-align: center;line-height: 80px;}
+.s_content>ul>li>div:nth-child(1){
+    width: 40%;
+}
+.s_content>ul>li>div:nth-child(2n){
+    width: 10%;
+}
+.tab_1>div{float: left;width: 12px;
+margin-left: 5px;}
+.tab_1 dl{float: left;}
+.tab_1 dl dt{float: left;width: 80px;height: 80px;}
+.tab_1 dl dt img{width: 100%;height: 100%;}
+.tab_1 dl dd{
+    float: left;
+    line-height: 24px;
+}
+.tab_1 dl dd span{font-size:12px;padding: 3px 10px;border:1px solid #ccc;}
+.tab_3 ul{width: 95px;margin: 0 auto;margin-top: 20px;}
+.tab_3 ul li{float: left;width: 30px;height: 30px;text-align: center;line-height: 30px;border:1px solid #ccc;box-sizing:border-box;cursor: pointer;}
+.checkboxBtn{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border:1px solid #abcdef;
+}
+.checked{
+    color:#abcdef;
+}
+.checked a{
+    background-color: #abcdef;
+}
+
+.s_total{line-height: 50px;height: 50px;border-bottom:1px solid #aaa;padding-left: 5px;width: 100%;}
+.s_total>div{float: left;margin-right: 10px;cursor: pointer;}
+.s_total a{text-decoration: none;color:#000;}
+.s_total>div.total{float: right;}
+.s_total>div.total div{float: left;margin-left: 20px;}
+.totalBtn{background-color: #abcdef;padding: 0 30px;}
+
+
+/* 弹框样式 */
+.dialog{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft Yahei";
+    display: none;
+}
+.dialogShow{
+    display: block;
+}
+.dialog_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.dialog_con{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    margin-top: -100px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.dialog_title{
+    height: 30px;
+    line-height: 30px;
+    background-color: #abcdef;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.dialog_titleTxt{
+    float: left;
+}
+.dialog_close{
+    float: right;
+    cursor: pointer;
+    width: 24px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 3px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.dialog_info{
+    padding: 10px;
+}
+.dialog_infoTxt{
+    height: 110px;
+    text-align: center;
+    line-height: 110px;
+    font-size: 16px;
+}
+.dialog_btn{
+    margin: 0 auto;
+    width: 160px;
+}
+.dialog_btn a{
+    padding: 5px 20px;
+    border: 1px solid #abcdef;
+    text-decoration:none;
+    background-color:#abcdef;
+    color: #000;
+}
+
+
+
+
+/* 地址页面 */
+.shopping-address{}
+.shopping-address h5{
+    padding: 10px;
+}
+.addressList,.addressList ul{
+    overflow: hidden;
+}
+.addressList ul li{
+    width: 25%;
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.adsInfo{
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.adsInfo p{
+    line-height: 20px;
+}
+.adsDefault,.setDefault{
+    display: inline-block;
+    padding: 3px 15px;
+    border: 1px solid rgb(240,20,0);
+    text-decoration: none;
+    color: rgb(240,20,0);
+}
+.adsDefault{
+    font-size: 12px;
+    padding: 2px 10px;
+    display: none;
+}
+.h30{
+    height: 20px;
+}
+.addressList ul li:hover>div,.addressList ul li.active>div{
+    border: 1px solid rgb(240,20,0);
+}
+.addressList ul li:hover a.adsDefault,.addressList ul li.active a.adsDefault{
+    width: 80px;
+    
+}
+.addressList ul li:hover a.adsDefault{
+    display: block;
+}
+
+
+.adsInfo a:hover{
+    color: #fff;
+    background-color: rgb(240,20,0);
+}
+.setDefault{
+    position: absolute;
+    right: 5px;
+    top: 5px; 
+    color: #fff;
+    background-color: rgb(240,20,0);
+    display: none;
+}
+.setDefaultShoe{
+    display: block;
+}
+.loadMore{
+    text-align: center;
+    margin: 20px 0;    
+}
+.loadMore span{
+    cursor: pointer;
+    font-size: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+.postType ul{
+    margin: 0 auto;
+    width: 200px;
+}
+.postType ul li{
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    margin: 5px;
+    border: 1px solid rgb(240,20,0);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.postType ul li.active{
+    color: #fff;
+    background-color: rgb(240,20,0);
+}

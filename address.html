@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">  
+    <title>收货地址</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    
+    <div id="address" class="shopping-address">
+        <h5>收货地址：</h5>
+        <div class="addressList">
+            <ul>
+                <li v-for="(item,index) in showItemFn" v-bind:class="{active:item.defaultSelect}" @click="selectedList(item)">
+                    <div class="adsInfo">
+                        <p>姓名：<span class="adsName">{{item.name}}</span></p>
+                        <p>地址：<span class="adsAddress">{{item.address}}</span></p>
+                        <p>邮编：<span class="adsPostcode">{{item.postcode}}</span></p>
+                        <p>手机：<span class="adsTel">{{item.tel}}</span></p>
+                        <p class="h30"><a href="javascript:;" class="adsDefault" @click="selectedDefault(item)">设置默认地址</a></p>
+                        <a href="javascript:;" class="setDefault" v-bind:class="{setDefaultShoe:item.defaultAddress}">默认地址</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="loadMore">
+                <span @click="loadMore">加载更多</span>
+            </div>
+        </div>
+        <div class="postType">
+            <ul>
+                <li v-bind:class="{active:postType==1}" @click="postType=1">免费快递</li>
+                <li v-bind:class="{active:postType==2}" @click="postType=2">其他快递</li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/lib/vue.min.js"></script>
+    <script type="text/javascript" src="js/lib/vue-resource.min.js"></script>
+    <script type="text/javascript" src="js/address.js"></script>
+</body>
+</html>

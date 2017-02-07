@@ -1,0 +1,50 @@
+{
+    "status":1,
+    "product":{
+        "total":588,
+        "list":[
+        {
+            "pid":10001,
+            "name":"苹果iPhone5",
+            "introduce":"限量出售",
+            "tag":["最新","送耳机"],
+            "img":"img/phone5.jpg",
+            "per_price":4688,
+            "num":2
+        },{
+            "pid":10002,
+            "name":"小米mi2",
+            "introduce":"国民价位",
+            "tag":["最实惠","送蓝牙耳机"],
+            "img":"img/mi2.jpg",
+            "per_price":1688,
+            "num":5
+        },{
+            "pid":10003,
+            "name":"华为huawei 6plus",
+            "introduce":"相信我们的实力",
+            "tag":["最豪华","舒适"],
+            "img":"img/huawei6p.jpg",
+            "per_price":3888,
+            "num":1
+        },{
+            "pid":10004,
+            "name":"佳能 canon x7",
+            "introduce":"最清晰的你在这里",
+            "tag":["高像素","超小"],
+            "img":"img/canonx7.jpg",
+            "per_price":888,
+            "num":2
+        },{
+            "pid":10005,
+            "name":"苹果 macbook 13寸",
+            "introduce":"你懂的",
+            "tag":["最新","touchbar"],
+            "img":"img/mc13.jpg",
+            "per_price":13888,
+            "num":1
+        }
+    ]
+    },
+    "msg":"请求成功"
+}
