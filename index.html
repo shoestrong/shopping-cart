@@ -12,21 +12,22 @@
         <div class="s_title">
             <ul>
                 <li>商品</li>
-                <li>单价</li>
-                <li>数量</li>
-                <li>小计</li>
-                <li>操作</li>
+                <li>单价/数量</li>
+                <li>小计/操作</li>
             </ul>
         </div>
         <div class="s_content">
             <ul>
                 <li v-for="(item,index) in productList">
                     <div class="tab_1">
-                        <div class="btn" v-bind:class="{checked:item.checkFlag}" v-on:click="checkProduct(item,index)">
-                            <a href="javascript:;" class="checkboxBtn"></a>
-                        </div>
+                        
+                                <div class="btn" v-bind:class="{checked:item.checkFlag}" v-on:click="checkProduct(item,index)">
+                                    <a href="javascript:;" class="checkboxBtn"></a>
+                                </div>
                         <dl>
-                            <dt><img v-bind:src="item.img"></dt>
+                            <dt>
+                                <div class="imgBox"><img v-bind:src="item.img"></div>
+                                </dt>
                             <dd>
                                 <div class="s_name">{{item.name}}</div>
                                 <div class="s_introduce">{{item.introduce}}</div>
@@ -36,8 +37,6 @@
                     </div>
                     <div class="tab_2">
                         <span>{{item.per_price | moneySkin}}</span>
-                    </div>
-                    <div class="tab_3">
                         <ul>
                             <li v-on:click="changeNum(item,-1)">-</li>
                             <li v-model="item.num" v-text="item.num"></li>
@@ -46,14 +45,12 @@
                     </div>
                     <div class="tab_4">
                         <span>{{item.per_price*item.num | moneySkin}}</span>
-                    </div>
-                    <div class="tab_5">
                         <a href="javascript:;" v-on:click="deleteProduct(index)">删除</a>
                     </div>
                 </li>
             </ul>
             <div class="s_total">
-                <div class="btn" v-bind:class="{checked:checkAllBl}"  @click="checkAll()">
+                <div class="" v-bind:class="{checked:checkAllBl}"  @click="checkAll()">
                     <a href="javascript:;" class="checkboxBtn"></a> <span>{{checkAllText}}</span>
                 </div>
                 <div class="total">
